@@ -1,0 +1,6 @@
+__pycache__
+*.gam
+*.bam
+*.sh*
+*.sam
+*.bam.bai
