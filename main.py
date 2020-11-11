@@ -9,7 +9,7 @@ import logging
 #from numba import jit
 
 gamfile = sys.argv[1]
-tmpfilename = sys.argv[2] 
+bamfile = sys.argv[2] 
 headerfile = sys.argv[3]
 mate_pair = sys.argv[4] == "True"
 samheader = pysam.AlignmentFile(headerfile, "rb")
@@ -66,7 +66,7 @@ def to_cigar(edit, extended):
        return (1, edit.to_length) #INS
 
 with stream.open(gamfile, 'rb') as istream:
-    with pysam.AlignmentFile(tmpfilename, "wb", template=samheader, threads=4) as outf:
+    with pysam.AlignmentFile(bamfile, "wb", template=samheader, threads=4) as outf:
         for data in istream:
             m = vg_pb2.Alignment()
             m.ParseFromString(data)
