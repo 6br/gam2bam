@@ -4,6 +4,8 @@ Convert GAM format to BAM format (regarding each node in GAM format as each refe
 
 ## usage
 
+Input: input.vg and input.gam
+
 ```bash
 pip install pystream-protobuf
 vg view input.vg > input.gfa

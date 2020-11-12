@@ -1,5 +1,4 @@
 #/usr/bin/env python3
-#pip install pystream-protobuf
 import stream 
 import vg_pb2
 import pysam
